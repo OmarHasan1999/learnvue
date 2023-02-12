@@ -4,5 +4,5 @@
 
 ```
 npm i
-npm run sereve
+npm run serve
 ```
