@@ -22,7 +22,7 @@ export default {
           max-width: 400px;
           margin: 25px auto;
           border: 2px solid #ccc;
-          border-radius: 5px;
+          border-radius: 7px;
           padding: 30px;
 
 }

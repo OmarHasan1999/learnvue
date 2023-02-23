@@ -1,15 +1,17 @@
 <template lang="html">
     <div>
-           <p class="head">Header</p>
+           <h1 class="head">Header</h1>
+           
            <slot></slot>
-           <p class="end">Footer</p>  
-           <slot name="afterFooter"></slot>
+
+           <h1 class="end">Footer</h1>  
+           <p>&copy;Maestro</p>
               
     </div>
 </template>
 <script lang="js">
 export default {
-    name:"NewPageVue"
+    
     
 }
 </script>
@@ -17,7 +19,7 @@ export default {
    .head , .end {
          background-color: black;
          color: white;
-         padding: 25px;
+         padding: 20px;
    }
     
 </style>
