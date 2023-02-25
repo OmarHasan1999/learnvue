@@ -6,41 +6,32 @@
 npm i
 npm run serve
 ```
-
-### data , props , slots **vuejs**
-
-*data return*
-
-```
-export default{
-     data() { 
-        return {  title: }
-
-            }  
-            }
-```
-**data** is private memory of each components where you can store any variable you need
-
-
 ___
+Handling Events and Methods in **VueJS**
 
-*props*
-```
-export default{
-    props:["title","description"]
+-if your Vuejs website has clickable buttons, forms, etc., 
+
+you would surely want that if a user clicks a button, submits a form, or even moves their mouse Vue.js website would respond somehow.
+
+As a simple example, we can implement a counter that increments every time a user clicks a button
+```js
+data() {
+  return {
+    count: 0
+  }
 }
 ```
-**props** are how you pass this data from a parent component down to to a child component 
-
->[example](src/views/CardMyPage.vue)
-___
-*slots*
+In the view, we can define the method to run when a button is clicked ...
+```js
+<label>Count is: {{count}}</label>
+<button v-on:click="count++">Increment</button>
 ```
-<p>Header</p>
-<slot></slot>
-<p>Footer</p>
-``` 
-using vue slots , yuu can pass or distribute HTML code across various component in your project
 
->[example](src/views/NewPage.vue)
-
+The most common events that are generally used to be handled :
+- keyup
+- submit 
+- drag
+- scroll
+- mouseover
+___
+on this [**page**](src/App.vue) are two simple examples of using events and in vuejs
