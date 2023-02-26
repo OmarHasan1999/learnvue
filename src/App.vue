@@ -5,7 +5,8 @@
  
  <div>
   <h3>{{ Name }}</h3>
-  <input type="text" @keyup="logToConsole">
+  <input type="text" @keyup="logToConsole" ref="form"><br><br>
+  <button @click="handleRef">click here</button>
  </div>
    
 </template>
@@ -34,6 +35,14 @@ methods:{
   },
   logToConsole(c){
      this.Name = c.target.value
+  },
+  handleRef(){
+    if( this.$refs.form.classList.contains("custom_style") )  {
+        this.$refs.form.classList.remove("custom_style") 
+        this.$refs.form.focus()  }
+    else{ this.$refs.form.classList.add("custom_style") }
+         
+  
   }
 }
      
@@ -54,7 +63,7 @@ methods:{
           margin-top : 60px;
           text-align : center;
   }
-        
+  input.custom_style{padding:6px;}      
   
   </style>
   
