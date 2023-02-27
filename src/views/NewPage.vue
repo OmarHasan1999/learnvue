@@ -1,25 +1,20 @@
 <template lang="html">
     <div>
-           <h1 class="head">Header</h1>
-           
-           <slot></slot>
-
-           <h1 class="end">Footer</h1>  
-           <p>&copy;Maestro</p>
-              
+        <p class="example" data-v-f3f3eg9>{{ title }}</p>
     </div>
 </template>
 <script lang="js">
 export default {
-    
-    
+    data(){
+      return{
+          title:"Component 1",
+          
+      }
+    }
 }
 </script>
 <style lang="css">
-   .head , .end {
-         background-color: black;
-         color: white;
-         padding: 20px;
-   }
+  .example[data-v-f3f3eg9] { color:white;
+          font-size: 40px;}
     
 </style>

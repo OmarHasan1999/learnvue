@@ -1,13 +1,16 @@
 <template lang="html">
   <div>
-       <h1>{{ title }}</h1>
-    
+    <p>{{ title }}</p>
+    <slot></slot>
   </div>
 </template>
-<script>
+<script lang="js">
 export default {
-  
-  props:["title"]
+  data(){
+     return{
+         title:"This is Parent Component"
+     }
+  }
 }
 </script>
 <style lang="css">
