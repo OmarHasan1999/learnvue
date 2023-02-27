@@ -8,34 +8,42 @@ npm run serve
 ```
 ___
 
+>Styling Options in VueJS
 
-Template Refs in **vue**
-
-**ref** is a special attribute, similar to the **key** attribute discussed in the **v-for** chapter. 
-
-It allows us to obtain a direct reference to a specific DOM element or child component instance after it's mounted.
-
- This may be useful when you want to, for example, programmatically focus an input on component mount, or initialize a 3rd party library on an element
-
-  -we can use the special ref attribute:
-  ```js
-  <input ref="input">
-  ```
-  example : 
-  ```js
-   <script>
-export default {
-  mounted() {
-    this.$refs.input.focus()
-  }
+Some of them include :
+ - Global stylesheets
+ - Global Component styles
+ - scoped component styles
+  ___
+  When a **style** tag has the scoped attribute, its CSS will apply to elements of the current component only.
+```js
+<style scoped>
+.example {
+  color: red;
 }
-</script>
+</style>
 
 <template>
-  <input ref="input" />
+  <div class="example">hi</div>
 </template>
-
-
-  ```
-
-[for more example ...](https://vuejs.org/guide/essentials/template-refs.html)
+```
+___
+The **module** attribute instructs Vue Loader to inject the CSS modules locals object into the component as a computed property with the name **$style**
+```js
+<template>
+  <p :class="$style.red">
+    This should be red
+  </p>
+</template>
+```
+Then, add the **module** attribute to your style :
+```js
+<style module>
+.red {
+  color: red;
+}
+.bold {
+  font-weight: bold;
+}
+</style>
+```

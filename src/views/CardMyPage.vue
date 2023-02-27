@@ -1,31 +1,17 @@
 <template lang="html">
-    <div class="code">
-        <div>
-            <h1>{{ title }}</h1>
-            <div>
-                <p>{{ description }} </p>
-
-            </div>
-        </div>
-        
-    </div>
+    <div>
+        <p>{{ title }}</p>
+    </div>  
 </template>
-<script lang="js">
+<script>
 export default {
-   
-    props:["title","description"]
-    
+    data(){
+       return{
+          title:"Component 2"
+       }
+    }
 }
 </script>
-<style lang="css">
-.code  {
-          max-width: 400px;
-          margin: 25px auto;
-          border: 2px solid #ccc;
-          border-radius: 7px;
-          padding: 30px;
-
-}
-  
-    
+<style scoped>
+    p {font-size:30px;}
 </style>
