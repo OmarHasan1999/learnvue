@@ -5,13 +5,16 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faUser, faRobot, faArrowLeft, faArrowRight, faSave, faExclamationTriangle } from "@fortawesome/free-solid-svg-icons";
 import mitt from "mitt";
-import './assets/global.css'
+
+
+
 
 library.add(faUser, faRobot, faArrowLeft, faArrowRight, faSave, faExclamationTriangle);
 
 const emitter = mitt();
 
 const app = createApp(App);
+
 
 app.config.globalProperties.emitter = emitter;
 app.use(router)

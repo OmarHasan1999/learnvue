@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from "vue-router";
 import PageNotFound from '../views/PageNotFound.vue'
-  
+
 const routes = [
     {
         path: '/:catchAll(.*)*',
